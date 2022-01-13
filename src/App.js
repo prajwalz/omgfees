@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css';
+import Nav from './components/header/Nav';
+import Body from './components/content/Body';
+import 'antd/dist/antd.dark.css';
+
+const { SubMenu } = Menu;
+
 
 function App() {
+
+  const styles = {
+    bk: {
+        width: "100%",
+        height: "100%",
+        background: "#313131",  
+    }
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Layout style={styles.bk}>
+          <Nav />
+          <Body />
+        </Layout>
+      </>
   );
 }
 
